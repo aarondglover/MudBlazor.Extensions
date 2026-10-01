@@ -8,6 +8,7 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    if: github.repository == 'fgilde/MudBlazor.Extensions'
     permissions:
       contents: read
       id-token: write   # required so nuget.org can trade the OIDC token for a short lived key

@@ -16,6 +16,7 @@ on:
 jobs:
   publish:
     runs-on: windows-latest
+    if: github.repository == 'fgilde/MudBlazor.Extensions'
     env:
       # job level so the step conditions can read it, secrets are not available in "if"
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

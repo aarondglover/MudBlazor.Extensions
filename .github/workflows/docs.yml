@@ -25,6 +25,7 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: github.repository == 'fgilde/MudBlazor.Extensions'
     
     steps:
       - name: Checkout repository
